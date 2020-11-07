@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Estacionamento
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
+    public partial class FrmVeiculo : MetroFramework.Forms.MetroForm
+    {    
+        public FrmVeiculo()
         {
             InitializeComponent();
+        }
+
+        private void cmdSair_Click(object sender, EventArgs e)
+        {
+            this.FindForm();
+            this.Close();
         }
     }
 }
