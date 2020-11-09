@@ -34,7 +34,6 @@
             this.cmdHistorico = new MetroFramework.Controls.MetroButton();
             this.cmdSair = new MetroFramework.Controls.MetroButton();
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
-            this.cmdAlterar = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.cmdLocalizaCliente = new MetroFramework.Controls.MetroButton();
             this.cmdVeiculos = new MetroFramework.Controls.MetroButton();
@@ -53,11 +52,13 @@
             // cmdSalvar
             // 
             this.cmdSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSalvar.Enabled = false;
             this.cmdSalvar.Location = new System.Drawing.Point(127, 12);
             this.cmdSalvar.Name = "cmdSalvar";
             this.cmdSalvar.Size = new System.Drawing.Size(110, 56);
             this.cmdSalvar.TabIndex = 8;
             this.cmdSalvar.Text = "Salvar";
+            this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
             // 
             // cmdNovo
             // 
@@ -67,7 +68,7 @@
             this.cmdNovo.Size = new System.Drawing.Size(101, 56);
             this.cmdNovo.TabIndex = 9;
             this.cmdNovo.Text = "Novo";
-            this.cmdNovo.Click += new System.EventHandler(this.metroButton2_Click);
+            this.cmdNovo.Click += new System.EventHandler(this.cmdNovo_Click);
             // 
             // metroPanel1
             // 
@@ -75,7 +76,6 @@
             this.metroPanel1.Controls.Add(this.cmdHistorico);
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.cmdExcluir);
-            this.metroPanel1.Controls.Add(this.cmdAlterar);
             this.metroPanel1.Controls.Add(this.cmdSalvar);
             this.metroPanel1.Controls.Add(this.cmdNovo);
             this.metroPanel1.CustomBackground = true;
@@ -93,7 +93,8 @@
             // cmdHistorico
             // 
             this.cmdHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdHistorico.Location = new System.Drawing.Point(475, 12);
+            this.cmdHistorico.Enabled = false;
+            this.cmdHistorico.Location = new System.Drawing.Point(359, 12);
             this.cmdHistorico.Name = "cmdHistorico";
             this.cmdHistorico.Size = new System.Drawing.Size(110, 56);
             this.cmdHistorico.TabIndex = 13;
@@ -112,20 +113,13 @@
             // cmdExcluir
             // 
             this.cmdExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdExcluir.Location = new System.Drawing.Point(359, 12);
+            this.cmdExcluir.Enabled = false;
+            this.cmdExcluir.Location = new System.Drawing.Point(243, 12);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(110, 56);
             this.cmdExcluir.TabIndex = 11;
             this.cmdExcluir.Text = "Excluir";
-            // 
-            // cmdAlterar
-            // 
-            this.cmdAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdAlterar.Location = new System.Drawing.Point(243, 12);
-            this.cmdAlterar.Name = "cmdAlterar";
-            this.cmdAlterar.Size = new System.Drawing.Size(110, 56);
-            this.cmdAlterar.TabIndex = 10;
-            this.cmdAlterar.Text = "Alterar";
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
             // 
             // metroPanel2
             // 
@@ -160,13 +154,14 @@
             this.cmdLocalizaCliente.Size = new System.Drawing.Size(110, 46);
             this.cmdLocalizaCliente.TabIndex = 23;
             this.cmdLocalizaCliente.Text = "Localizar Cliente";
+            this.cmdLocalizaCliente.Click += new System.EventHandler(this.cmdLocalizaCliente_Click);
             // 
             // cmdVeiculos
             // 
             this.cmdVeiculos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdVeiculos.Location = new System.Drawing.Point(641, 173);
             this.cmdVeiculos.Name = "cmdVeiculos";
-            this.cmdVeiculos.Size = new System.Drawing.Size(90, 46);
+            this.cmdVeiculos.Size = new System.Drawing.Size(110, 46);
             this.cmdVeiculos.TabIndex = 22;
             this.cmdVeiculos.Text = "Cadastrar Veiculo";
             this.cmdVeiculos.Click += new System.EventHandler(this.cmdVeiculos_Click);
@@ -268,6 +263,7 @@
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Cadastro de Cliente";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -281,7 +277,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton cmdSair;
         private MetroFramework.Controls.MetroButton cmdExcluir;
-        private MetroFramework.Controls.MetroButton cmdAlterar;
         private MetroFramework.Controls.MetroButton cmdHistorico;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton cmdLocalizaCliente;

@@ -17,10 +17,24 @@ namespace Estacionamento
             InitializeComponent();
         }
 
+        Login lg = new Login();
+        private int idFunc;
+        private int idLogin;
+        public int IdFunc { get => idFunc; set => idFunc = value; }
+        public int IdLogin { get => idLogin; set => idLogin = value; }
+
         private void cmdSair_Click(object sender, EventArgs e)
         {
             this.FindForm();
             this.Close();
+        }
+
+        private void cmdSalvar_Click(object sender, EventArgs e)
+        {
+            lg.NomeLogin = txtNomeLogin.Text;
+            lg.Senha = txtSenha.Text;
+
+            lg.IncluirLogin();
         }
     }
 }

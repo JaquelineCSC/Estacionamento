@@ -44,5 +44,17 @@ namespace Estacionamento
             FrmVeiculo car = new FrmVeiculo();
             car.ShowDialog();
         }
+
+        private void cmdCliente_Click(object sender, EventArgs e)
+        {
+            FrmCadastroCliente cc = new FrmCadastroCliente();
+            cc.ShowDialog();
+        }
+
+        private void estacionamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastraEstacionamento ce = new FrmCadastraEstacionamento();
+            ce.ShowDialog();
+        }
     }
 }

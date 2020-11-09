@@ -1,5 +1,4 @@
-﻿using MetroFramework.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,31 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace Estacionamento
 {
-    public partial class FrmCadastroCliente : MetroFramework.Forms.MetroForm
+    public partial class FrmCadastraEstacionamento : MetroFramework.Forms.MetroForm
     {
-        public FrmCadastroCliente()
+        public FrmCadastraEstacionamento()
         {
             InitializeComponent();
         }
         private string status = "Navegando";
-        Cliente cliente = new Cliente();
+        Estacionamento park = new Estacionamento();
         private void cmdSair_Click(object sender, EventArgs e)
         {
             this.FindForm();
             this.Close();
         }
-
-        private void cmdVeiculos_Click(object sender, EventArgs e)
-        {
-            FrmVeiculo car = new FrmVeiculo();
-            car.ShowDialog();
-        }
-
-       
-
         private void LimpaControle()
         {
             foreach (Control item in this.metroPanel2.Controls)
@@ -56,6 +47,8 @@ namespace Estacionamento
                         item.Enabled = true;
                     if (item is DateTimePicker)
                         item.Enabled = true;
+                    if (item is MetroComboBox)
+                        item.Enabled = true;
                 }
             }
             if (status == "Editando")
@@ -65,6 +58,8 @@ namespace Estacionamento
                     if (item is MetroTextBox)
                         item.Enabled = true;
                     if (item is DateTimePicker)
+                        item.Enabled = true;
+                    if (item is MetroComboBox)
                         item.Enabled = true;
                 }
             }
@@ -76,6 +71,8 @@ namespace Estacionamento
                         item.Enabled = false;
                     if (item is DateTimePicker)
                         item.Enabled = false;
+                    if (item is MetroComboBox)
+                        item.Enabled = false;
                 }
             }
         }
@@ -85,45 +82,26 @@ namespace Estacionamento
             status = "Inserindo";
             HabilitaControle();
         }
+
         private void cmdSalvar_Click(object sender, EventArgs e)
         {
-            cliente.Nome = txtNomeCliente.Text;
-            cliente.Cpf = txtCpfCliente.Text;
-            cliente.DataCadastro = dtpDataCadastro.Value.ToString("yyyy-MM-dd");
-            cliente.Fone = txtContato.Text;           
+            park.NomeEstacionamento = txtNome.Text;
+            park.ValorHora = double.Parse(txtValorHora.Text);
+            park.Endereco = txtEndereco.Text;
 
             if (status == "Inserindo")
             {
-                cliente.IncluirCliente();
-                MessageBox.Show("Cliente Cadastrado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                park.IncluirEstacionamento();
+                MessageBox.Show("Estacionamento Cadastrado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             if (status == "Editando")
             {
-                cliente.AlterarDados();
-                MessageBox.Show("Cliente alterado com sucesso!!!");
+                park.AlterarEstacionamento();
+                MessageBox.Show("Estacionamento alterado com sucesso!!!");
             }
             status = "Navegando";
             LimpaControle();
-            HabilitaControle();
-            dtpDataCadastro.ResetText();
-        }
-
-        private void cmdLocalizaCliente_Click(object sender, EventArgs e)
-        {
-            FrmLocalizaCliente lc = new FrmLocalizaCliente();
-            lc.ShowDialog();
-            cliente.IdCliente = lc.IdCliente;
-            if (cliente.IdCliente > 0)
-            {
-                cliente.ConsultarCliente();
-
-                txtNomeCliente.Text = cliente.Nome;
-                txtCpfCliente.Text = cliente.Cpf;
-                dtpDataCadastro.Text = cliente.DataCadastro;
-                txtContato.Text = cliente.Fone;
-            }
-            status = "Editando";
             HabilitaControle();
         }
 
@@ -133,17 +111,34 @@ namespace Estacionamento
             {
                 if (status == "Editando")
                 {
-                    cliente.ExcluirDados();
+                    park.ExcluirEstacionamento();
                     MessageBox.Show("Excluido com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpaControle();
                     status = "Navegando";
                     HabilitaControle();
                 }
-
             }
         }
 
-        private void FrmCadastroCliente_Load(object sender, EventArgs e)
+        private void cmdLocalizaEstacionamento_Click(object sender, EventArgs e)
+        {
+            FrmPesquisaEstacionamento pe = new FrmPesquisaEstacionamento();
+            pe.ShowDialog();
+
+            park.IdEstacionamento = pe.IdEstacionamento;
+            if (park.IdEstacionamento > 0)
+            {
+                park.ConsultarEstacionamento();
+
+                txtNome.Text = park.NomeEstacionamento;
+                txtValorHora.Text = park.ValorHora.ToString();
+                txtEndereco.Text = park.Endereco;
+            }
+            status = "Editando";
+            HabilitaControle();
+        }
+
+        private void FrmCadastraEstacionamento_Load(object sender, EventArgs e)
         {
             status = "Navegando";
             HabilitaControle();

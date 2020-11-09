@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.cmdVisualizaSenha = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtSenha = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtNomeLogin = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.cmdSair = new MetroFramework.Controls.MetroButton();
-            this.cmdAlterar = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -45,8 +43,7 @@
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Gray;
-            this.metroPanel1.Controls.Add(this.cmdVisualizaSenha);
-            this.metroPanel1.Controls.Add(this.metroTextBox2);
+            this.metroPanel1.Controls.Add(this.txtSenha);
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.Controls.Add(this.txtNomeLogin);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -62,22 +59,14 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // cmdVisualizaSenha
+            // txtSenha
             // 
-            this.cmdVisualizaSenha.Location = new System.Drawing.Point(312, 64);
-            this.cmdVisualizaSenha.Name = "cmdVisualizaSenha";
-            this.cmdVisualizaSenha.Size = new System.Drawing.Size(34, 34);
-            this.cmdVisualizaSenha.TabIndex = 6;
-            this.cmdVisualizaSenha.Text = "Visualiza";
-            // 
-            // metroTextBox2
-            // 
-            this.metroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox2.Location = new System.Drawing.Point(141, 73);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '*';
-            this.metroTextBox2.Size = new System.Drawing.Size(149, 23);
-            this.metroTextBox2.TabIndex = 5;
+            this.txtSenha.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtSenha.Location = new System.Drawing.Point(141, 73);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(149, 23);
+            this.txtSenha.TabIndex = 5;
             // 
             // metroLabel2
             // 
@@ -113,7 +102,6 @@
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.Gray;
             this.metroPanel2.Controls.Add(this.cmdSair);
-            this.metroPanel2.Controls.Add(this.cmdAlterar);
             this.metroPanel2.Controls.Add(this.cmdSalvar);
             this.metroPanel2.CustomBackground = true;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
@@ -137,15 +125,6 @@
             this.cmdSair.Text = "Sair";
             this.cmdSair.Click += new System.EventHandler(this.cmdSair_Click);
             // 
-            // cmdAlterar
-            // 
-            this.cmdAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdAlterar.Location = new System.Drawing.Point(112, 12);
-            this.cmdAlterar.Name = "cmdAlterar";
-            this.cmdAlterar.Size = new System.Drawing.Size(88, 66);
-            this.cmdAlterar.TabIndex = 3;
-            this.cmdAlterar.Text = "Alterar";
-            // 
             // cmdSalvar
             // 
             this.cmdSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -154,6 +133,7 @@
             this.cmdSalvar.Size = new System.Drawing.Size(88, 66);
             this.cmdSalvar.TabIndex = 2;
             this.cmdSalvar.Text = "Salvar";
+            this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
             // 
             // FrmCadastroLogin
             // 
@@ -176,14 +156,12 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtSenha;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtNomeLogin;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton cmdSair;
-        private MetroFramework.Controls.MetroButton cmdAlterar;
         private MetroFramework.Controls.MetroButton cmdSalvar;
-        private MetroFramework.Controls.MetroButton cmdVisualizaSenha;
     }
 }
