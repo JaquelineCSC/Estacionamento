@@ -35,6 +35,7 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaboradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.processosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saidaVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.lblDataHora = new MetroFramework.Controls.MetroLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.estacionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -66,11 +66,11 @@
             this.cadastrosToolStripMenuItem,
             this.processosToolStripMenuItem,
             this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(15, 60);
+            this.menuStrip1.Location = new System.Drawing.Point(20, 74);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1137, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1516, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,29 +82,36 @@
             this.veiculoToolStripMenuItem,
             this.estacionamentoToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // colaboradorToolStripMenuItem
             // 
             this.colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
-            this.colaboradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaboradorToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.colaboradorToolStripMenuItem.Text = "Colaborador";
             this.colaboradorToolStripMenuItem.Click += new System.EventHandler(this.colaboradorToolStripMenuItem_Click);
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             this.veiculoToolStripMenuItem.Click += new System.EventHandler(this.veiculoToolStripMenuItem_Click);
+            // 
+            // estacionamentoToolStripMenuItem
+            // 
+            this.estacionamentoToolStripMenuItem.Name = "estacionamentoToolStripMenuItem";
+            this.estacionamentoToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.estacionamentoToolStripMenuItem.Text = "Estacionamento";
+            this.estacionamentoToolStripMenuItem.Click += new System.EventHandler(this.estacionamentoToolStripMenuItem_Click);
             // 
             // processosToolStripMenuItem
             // 
@@ -113,31 +120,31 @@
             this.saidaVeiculoToolStripMenuItem,
             this.consultaToolStripMenuItem});
             this.processosToolStripMenuItem.Name = "processosToolStripMenuItem";
-            this.processosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.processosToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.processosToolStripMenuItem.Text = "Processos";
             // 
             // entradaVeiculoToolStripMenuItem
             // 
             this.entradaVeiculoToolStripMenuItem.Name = "entradaVeiculoToolStripMenuItem";
-            this.entradaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.entradaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.entradaVeiculoToolStripMenuItem.Text = "Entrada Veiculo";
             // 
             // saidaVeiculoToolStripMenuItem
             // 
             this.saidaVeiculoToolStripMenuItem.Name = "saidaVeiculoToolStripMenuItem";
-            this.saidaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.saidaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.saidaVeiculoToolStripMenuItem.Text = "Saida Veiculo";
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.consultaToolStripMenuItem.Text = "Consulta";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -152,23 +159,23 @@
             this.metroPanel1.CustomBackground = true;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(15, 83);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(20, 102);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1502, 58);
+            this.metroPanel1.Size = new System.Drawing.Size(2003, 71);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 8;
+            this.metroPanel1.VerticalScrollbarSize = 11;
             // 
             // cmdSair
             // 
             this.cmdSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSair.Location = new System.Drawing.Point(1147, 2);
-            this.cmdSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdSair.Location = new System.Drawing.Point(1529, 2);
+            this.cmdSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdSair.Name = "cmdSair";
-            this.cmdSair.Size = new System.Drawing.Size(156, 52);
+            this.cmdSair.Size = new System.Drawing.Size(208, 64);
             this.cmdSair.TabIndex = 6;
             this.cmdSair.Text = "Sair";
             this.cmdSair.Click += new System.EventHandler(this.cmdSair_Click);
@@ -176,40 +183,40 @@
             // cmdConsulta
             // 
             this.cmdConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdConsulta.Location = new System.Drawing.Point(572, 2);
-            this.cmdConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdConsulta.Location = new System.Drawing.Point(763, 2);
+            this.cmdConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdConsulta.Name = "cmdConsulta";
-            this.cmdConsulta.Size = new System.Drawing.Size(156, 52);
+            this.cmdConsulta.Size = new System.Drawing.Size(208, 64);
             this.cmdConsulta.TabIndex = 5;
             this.cmdConsulta.Text = "Consulta";
             // 
             // cmdSaida
             // 
             this.cmdSaida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSaida.Location = new System.Drawing.Point(380, 2);
-            this.cmdSaida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdSaida.Location = new System.Drawing.Point(507, 2);
+            this.cmdSaida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdSaida.Name = "cmdSaida";
-            this.cmdSaida.Size = new System.Drawing.Size(156, 52);
+            this.cmdSaida.Size = new System.Drawing.Size(208, 64);
             this.cmdSaida.TabIndex = 4;
             this.cmdSaida.Text = "Saida Veiculo";
             // 
             // cmdEntada
             // 
             this.cmdEntada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdEntada.Location = new System.Drawing.Point(195, 2);
-            this.cmdEntada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdEntada.Location = new System.Drawing.Point(260, 2);
+            this.cmdEntada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdEntada.Name = "cmdEntada";
-            this.cmdEntada.Size = new System.Drawing.Size(156, 52);
+            this.cmdEntada.Size = new System.Drawing.Size(208, 64);
             this.cmdEntada.TabIndex = 3;
             this.cmdEntada.Text = "Entrada Veiculo";
             // 
             // cmdCliente
             // 
             this.cmdCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCliente.Location = new System.Drawing.Point(9, 2);
-            this.cmdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdCliente.Location = new System.Drawing.Point(12, 2);
+            this.cmdCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdCliente.Name = "cmdCliente";
-            this.cmdCliente.Size = new System.Drawing.Size(156, 52);
+            this.cmdCliente.Size = new System.Drawing.Size(208, 64);
             this.cmdCliente.TabIndex = 2;
             this.cmdCliente.Text = "Clientes";
             this.cmdCliente.Click += new System.EventHandler(this.cmdCliente_Click);
@@ -221,24 +228,23 @@
             this.metroPanel2.Controls.Add(this.lblDataHora);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 8;
-            this.metroPanel2.Location = new System.Drawing.Point(15, 765);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(20, 942);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1502, 55);
+            this.metroPanel2.Size = new System.Drawing.Size(2003, 68);
             this.metroPanel2.TabIndex = 3;
             this.metroPanel2.Tag = "a";
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 8;
+            this.metroPanel2.VerticalScrollbarSize = 11;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(312, 16);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(416, 20);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(0, 0);
             this.metroLabel1.TabIndex = 4;
@@ -247,10 +253,10 @@
             // 
             this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.metroLink1.Location = new System.Drawing.Point(20, 16);
-            this.metroLink1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroLink1.Location = new System.Drawing.Point(27, 20);
+            this.metroLink1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(175, 28);
+            this.metroLink1.Size = new System.Drawing.Size(233, 34);
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLink1.TabIndex = 3;
             this.metroLink1.Text = "GitHub";
@@ -258,47 +264,39 @@
             // lblDataHora
             // 
             this.lblDataHora.AutoSize = true;
-            this.lblDataHora.Location = new System.Drawing.Point(1037, 16);
-            this.lblDataHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDataHora.Location = new System.Drawing.Point(1383, 20);
             this.lblDataHora.Name = "lblDataHora";
-            this.lblDataHora.Size = new System.Drawing.Size(80, 19);
+            this.lblDataHora.Size = new System.Drawing.Size(83, 20);
             this.lblDataHora.TabIndex = 2;
             this.lblDataHora.Text = "Data e Hora";
-            // 
-            // estacionamentoToolStripMenuItem
-            // 
-            this.estacionamentoToolStripMenuItem.Name = "estacionamentoToolStripMenuItem";
-            this.estacionamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.estacionamentoToolStripMenuItem.Text = "Estacionamento";
-            this.estacionamentoToolStripMenuItem.Click += new System.EventHandler(this.estacionamentoToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Estacionamento.Properties.Resources.estacionamento_carros;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 145);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 178);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1502, 616);
+            this.pictureBox1.Size = new System.Drawing.Size(2003, 758);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPrincipal";
-            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Style = MetroFramework.MetroColorStyle.Silver;
-            this.Text = "Para e Pague Estacionamentos";
+            this.Text = "Pare e Pague Estacionamentos";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);

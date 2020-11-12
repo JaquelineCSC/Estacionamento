@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.cmdSair = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.cmdSair = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,16 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // cmdSair
+            // 
+            this.cmdSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSair.Location = new System.Drawing.Point(587, 28);
+            this.cmdSair.Name = "cmdSair";
+            this.cmdSair.Size = new System.Drawing.Size(84, 34);
+            this.cmdSair.TabIndex = 8;
+            this.cmdSair.Text = "Cancelar";
+            this.cmdSair.Click += new System.EventHandler(this.cmdSair_Click);
             // 
             // dataGridView1
             // 
@@ -97,15 +107,6 @@
             this.metroLabel1.Size = new System.Drawing.Size(119, 25);
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Nome Cliente";
-            // 
-            // cmdSair
-            // 
-            this.cmdSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSair.Location = new System.Drawing.Point(587, 28);
-            this.cmdSair.Name = "cmdSair";
-            this.cmdSair.Size = new System.Drawing.Size(84, 34);
-            this.cmdSair.TabIndex = 8;
-            this.cmdSair.Text = "Cancelar";
             // 
             // FrmLocalizaCliente
             // 

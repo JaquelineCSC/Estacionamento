@@ -17,6 +17,7 @@ namespace Estacionamento
         {
             InitializeComponent();
         }
+
         private string status = "Navegando";
         Cliente cliente = new Cliente();
         private void cmdSair_Click(object sender, EventArgs e)
@@ -30,8 +31,6 @@ namespace Estacionamento
             FrmVeiculo car = new FrmVeiculo();
             car.ShowDialog();
         }
-
-       
 
         private void LimpaControle()
         {
@@ -58,7 +57,7 @@ namespace Estacionamento
                         item.Enabled = true;
                 }
             }
-            if (status == "Editando")
+            if (status == "Inserindo" || status == "Editando")
             {
                 foreach (Control item in this.metroPanel2.Controls)
                 {

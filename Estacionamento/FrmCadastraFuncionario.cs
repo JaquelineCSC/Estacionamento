@@ -66,7 +66,7 @@ namespace Estacionamento
                         item.Enabled = true;
                 }
             }
-            if (status == "Editando")
+            if (status == "Inserindo" || status == "Editando")
             {
                 foreach (Control item in this.metroPanel2.Controls)
                 {

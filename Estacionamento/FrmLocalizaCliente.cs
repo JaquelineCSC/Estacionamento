@@ -47,5 +47,11 @@ namespace Estacionamento
         {
             this.Close();
         }
+
+        private void cmdSair_Click(object sender, EventArgs e)
+        {
+            this.FindForm();
+            this.Close();
+        }
     }
 }
