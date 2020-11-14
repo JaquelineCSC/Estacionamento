@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Estacionamento
 {
-    public partial class SaidaVeiculo : MetroFramework.Forms.MetroForm
+    public partial class FrmConsulta : MetroFramework.Forms.MetroForm
     {
-        public SaidaVeiculo()
+        public FrmConsulta()
         {
             InitializeComponent();
+        }
+
+        private void FrmConsulta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -126,21 +126,23 @@
             // entradaVeiculoToolStripMenuItem
             // 
             this.entradaVeiculoToolStripMenuItem.Name = "entradaVeiculoToolStripMenuItem";
-            this.entradaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entradaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.entradaVeiculoToolStripMenuItem.Text = "Entrada Veiculo";
             this.entradaVeiculoToolStripMenuItem.Click += new System.EventHandler(this.entradaVeiculoToolStripMenuItem_Click);
             // 
             // saidaVeiculoToolStripMenuItem
             // 
             this.saidaVeiculoToolStripMenuItem.Name = "saidaVeiculoToolStripMenuItem";
-            this.saidaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saidaVeiculoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.saidaVeiculoToolStripMenuItem.Text = "Saida Veiculo";
+            this.saidaVeiculoToolStripMenuItem.Click += new System.EventHandler(this.saidaVeiculoToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -151,7 +153,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.cmdConsulta);
             this.metroPanel1.Controls.Add(this.cmdSaida);
@@ -161,10 +163,10 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(15, 83);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.Location = new System.Drawing.Point(7, 86);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1502, 58);
+            this.metroPanel1.Size = new System.Drawing.Size(1156, 58);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -173,8 +175,8 @@
             // cmdSair
             // 
             this.cmdSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSair.Location = new System.Drawing.Point(1147, 2);
-            this.cmdSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdSair.Location = new System.Drawing.Point(981, 2);
+            this.cmdSair.Margin = new System.Windows.Forms.Padding(2);
             this.cmdSair.Name = "cmdSair";
             this.cmdSair.Size = new System.Drawing.Size(156, 52);
             this.cmdSair.TabIndex = 6;
@@ -184,38 +186,41 @@
             // cmdConsulta
             // 
             this.cmdConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdConsulta.Location = new System.Drawing.Point(572, 2);
-            this.cmdConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdConsulta.Location = new System.Drawing.Point(721, 2);
+            this.cmdConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.cmdConsulta.Name = "cmdConsulta";
             this.cmdConsulta.Size = new System.Drawing.Size(156, 52);
             this.cmdConsulta.TabIndex = 5;
             this.cmdConsulta.Text = "Consulta";
+            this.cmdConsulta.Click += new System.EventHandler(this.cmdConsulta_Click);
             // 
             // cmdSaida
             // 
             this.cmdSaida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSaida.Location = new System.Drawing.Point(380, 2);
-            this.cmdSaida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdSaida.Location = new System.Drawing.Point(488, 2);
+            this.cmdSaida.Margin = new System.Windows.Forms.Padding(2);
             this.cmdSaida.Name = "cmdSaida";
             this.cmdSaida.Size = new System.Drawing.Size(156, 52);
             this.cmdSaida.TabIndex = 4;
             this.cmdSaida.Text = "Saida Veiculo";
+            this.cmdSaida.Click += new System.EventHandler(this.cmdSaida_Click);
             // 
             // cmdEntada
             // 
             this.cmdEntada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdEntada.Location = new System.Drawing.Point(195, 2);
-            this.cmdEntada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdEntada.Location = new System.Drawing.Point(245, 2);
+            this.cmdEntada.Margin = new System.Windows.Forms.Padding(2);
             this.cmdEntada.Name = "cmdEntada";
             this.cmdEntada.Size = new System.Drawing.Size(156, 52);
             this.cmdEntada.TabIndex = 3;
             this.cmdEntada.Text = "Entrada Veiculo";
+            this.cmdEntada.Click += new System.EventHandler(this.cmdEntada_Click);
             // 
             // cmdCliente
             // 
             this.cmdCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdCliente.Location = new System.Drawing.Point(9, 2);
-            this.cmdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmdCliente.Name = "cmdCliente";
             this.cmdCliente.Size = new System.Drawing.Size(156, 52);
             this.cmdCliente.TabIndex = 2;
@@ -231,7 +236,7 @@
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 8;
             this.metroPanel2.Location = new System.Drawing.Point(15, 765);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(1502, 55);
             this.metroPanel2.TabIndex = 3;
@@ -256,7 +261,7 @@
             this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.metroLink1.Location = new System.Drawing.Point(20, 16);
-            this.metroLink1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroLink1.Margin = new System.Windows.Forms.Padding(2);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(175, 28);
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
@@ -277,10 +282,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::Estacionamento.Properties.Resources.estacionamento_carros;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 145);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 157);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1502, 616);
+            this.pictureBox1.Size = new System.Drawing.Size(1156, 484);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -295,10 +300,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Pare e Pague Estacionamentos";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

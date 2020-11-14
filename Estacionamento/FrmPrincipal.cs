@@ -59,8 +59,38 @@ namespace Estacionamento
 
         private void entradaVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            cc.ShowDialog();
+            FrmEntradaVeiculo fev = new FrmEntradaVeiculo();
+            fev.ShowDialog();
+        }
+
+        private void cmdEntada_Click(object sender, EventArgs e)
+        {
+            FrmEntradaVeiculo fev = new FrmEntradaVeiculo();
+            fev.ShowDialog();
+        }
+
+        private void saidaVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo();
+            fsv.ShowDialog();
+        }
+
+        private void cmdSaida_Click(object sender, EventArgs e)
+        {
+            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo();
+            fsv.ShowDialog();
+        }
+
+        private void cmdConsulta_Click(object sender, EventArgs e)
+        {
+            FrmConsulta fc = new FrmConsulta();
+            fc.ShowDialog();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta fc = new FrmConsulta();
+            fc.ShowDialog();
         }
     }
 }

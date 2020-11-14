@@ -72,7 +72,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdHistorico);
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.cmdExcluir);
@@ -123,7 +123,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel2.BackColor = System.Drawing.Color.Teal;
             this.metroPanel2.Controls.Add(this.cmdLocalizaCliente);
             this.metroPanel2.Controls.Add(this.cmdVeiculos);
             this.metroPanel2.Controls.Add(this.txtContato);
@@ -213,9 +213,9 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel4.Location = new System.Drawing.Point(44, 173);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(125, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(129, 25);
             this.metroLabel4.TabIndex = 17;
-            this.metroLabel4.Text = "Data Cadastro";
+            this.metroLabel4.Text = "Data Cadastro:";
             // 
             // metroLabel3
             // 
@@ -224,9 +224,9 @@
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.Location = new System.Drawing.Point(93, 128);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(76, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(80, 25);
             this.metroLabel3.TabIndex = 16;
-            this.metroLabel3.Text = "Contato";
+            this.metroLabel3.Text = "Contato:";
             // 
             // metroLabel2
             // 
@@ -235,9 +235,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel2.Location = new System.Drawing.Point(127, 79);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(42, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(46, 25);
             this.metroLabel2.TabIndex = 15;
-            this.metroLabel2.Text = "CPF";
+            this.metroLabel2.Text = "CPF:";
             // 
             // metroLabel1
             // 
@@ -246,10 +246,10 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(24, 36);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(145, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(149, 25);
             this.metroLabel1.TabIndex = 14;
             this.metroLabel1.Tag = "";
-            this.metroLabel1.Text = "Nome Completo";
+            this.metroLabel1.Text = "Nome Completo:";
             // 
             // FrmCadastroCliente
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Name = "FrmCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Cadastro de Cliente";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);

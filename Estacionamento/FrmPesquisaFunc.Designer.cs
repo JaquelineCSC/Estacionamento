@@ -40,7 +40,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.dataGridView1);
             this.metroPanel1.Controls.Add(this.cmdPesquisar);
@@ -71,6 +71,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 97);
             this.dataGridView1.Name = "dataGridView1";
@@ -104,9 +105,9 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(29, 35);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(166, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(170, 25);
             this.metroLabel1.TabIndex = 4;
-            this.metroLabel1.Text = "Nome Colaborador";
+            this.metroLabel1.Text = "Nome Colaborador:";
             // 
             // FrmPesquisaFunc
             // 
@@ -115,7 +116,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FrmPesquisaFunc";
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Pesquisa Colaborador";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.FrmPesquisaFunc_Load);

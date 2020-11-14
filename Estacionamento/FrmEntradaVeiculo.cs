@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Estacionamento
 {
-    public partial class EntradaVeiculo : MetroFramework.Forms.MetroForm
+    public partial class FrmEntradaVeiculo : MetroFramework.Forms.MetroForm
     {
-        public EntradaVeiculo()
+        public FrmEntradaVeiculo()
         {
             InitializeComponent();
         }

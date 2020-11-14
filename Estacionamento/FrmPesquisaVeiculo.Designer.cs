@@ -40,7 +40,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.dataGridView1);
             this.metroPanel1.Controls.Add(this.cmdPesquisar);
@@ -71,8 +71,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(674, 260);
             this.dataGridView1.TabIndex = 7;
@@ -115,7 +116,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FrmPesquisaVeiculo";
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Pesquisa Veiculos";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.FrmPesquisaVeiculo_Load);

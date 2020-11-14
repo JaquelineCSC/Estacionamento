@@ -47,7 +47,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel2.BackColor = System.Drawing.Color.Teal;
             this.metroPanel2.Controls.Add(this.cmdLocalizaEstacionamento);
             this.metroPanel2.Controls.Add(this.txtEndereco);
             this.metroPanel2.Controls.Add(this.txtValorHora);
@@ -62,6 +62,7 @@
             this.metroPanel2.Location = new System.Drawing.Point(18, 109);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(765, 233);
+            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroPanel2.TabIndex = 15;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -115,9 +116,9 @@
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.Location = new System.Drawing.Point(161, 128);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(85, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(89, 25);
             this.metroLabel3.TabIndex = 16;
-            this.metroLabel3.Text = "Endereco";
+            this.metroLabel3.Text = "Endereco:";
             // 
             // metroLabel2
             // 
@@ -126,9 +127,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel2.Location = new System.Drawing.Point(117, 79);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(129, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(133, 25);
             this.metroLabel2.TabIndex = 15;
-            this.metroLabel2.Text = "Valor por Hora";
+            this.metroLabel2.Text = "Valor por Hora:";
             // 
             // metroLabel1
             // 
@@ -137,14 +138,14 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(24, 36);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(222, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(226, 25);
             this.metroLabel1.TabIndex = 14;
             this.metroLabel1.Tag = "";
-            this.metroLabel1.Text = "Nome do Estabelecimento";
+            this.metroLabel1.Text = "Nome do Estabelecimento:";
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.cmdExcluir);
             this.metroPanel1.Controls.Add(this.cmdSalvar);
@@ -211,7 +212,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroPanel2);
             this.Name = "FrmCadastraEstacionamento";
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Cadastro de Estacionamento";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.FrmCadastraEstacionamento_Load);

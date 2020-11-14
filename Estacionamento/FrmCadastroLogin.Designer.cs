@@ -42,7 +42,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.txtSenha);
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.Controls.Add(this.txtNomeLogin);
@@ -75,9 +75,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel2.Location = new System.Drawing.Point(68, 73);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(60, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(64, 25);
             this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "Senha";
+            this.metroLabel2.Text = "Senha:";
             // 
             // txtNomeLogin
             // 
@@ -94,13 +94,13 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(18, 20);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(110, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(114, 25);
             this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Nome Login";
+            this.metroLabel1.Text = "Nome Login:";
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel2.BackColor = System.Drawing.Color.Teal;
             this.metroPanel2.Controls.Add(this.cmdSair);
             this.metroPanel2.Controls.Add(this.cmdSalvar);
             this.metroPanel2.CustomBackground = true;
@@ -143,7 +143,7 @@
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FrmCadastroLogin";
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Cadastro de Login";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.metroPanel1.ResumeLayout(false);

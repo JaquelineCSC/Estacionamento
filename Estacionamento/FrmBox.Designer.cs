@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.cmdGerarBox = new MetroFramework.Controls.MetroButton();
             this.cmdSair = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.nudQtdBox = new System.Windows.Forms.NumericUpDown();
-            this.cmdGerarBox = new MetroFramework.Controls.MetroButton();
-            this.lblQtdBox = new MetroFramework.Controls.MetroLabel();
             this.lblNumeroBox = new MetroFramework.Controls.MetroLabel();
+            this.lblQtdBox = new MetroFramework.Controls.MetroLabel();
+            this.nudQtdBox = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdBox)).BeginInit();
@@ -44,7 +44,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel2.BackColor = System.Drawing.Color.Teal;
             this.metroPanel2.Controls.Add(this.cmdGerarBox);
             this.metroPanel2.Controls.Add(this.cmdSair);
             this.metroPanel2.Controls.Add(this.cmdSalvar);
@@ -59,6 +59,15 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // cmdGerarBox
+            // 
+            this.cmdGerarBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdGerarBox.Location = new System.Drawing.Point(139, 12);
+            this.cmdGerarBox.Name = "cmdGerarBox";
+            this.cmdGerarBox.Size = new System.Drawing.Size(88, 66);
+            this.cmdGerarBox.TabIndex = 5;
+            this.cmdGerarBox.Text = "Gerar Box";
             // 
             // cmdSair
             // 
@@ -80,50 +89,35 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.lblNumeroBox);
             this.metroPanel1.Controls.Add(this.lblQtdBox);
             this.metroPanel1.Controls.Add(this.nudQtdBox);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.CustomBackground = true;
+            this.metroPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(23, 77);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(364, 125);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroPanel1.TabIndex = 3;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel1
+            // lblNumeroBox
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(103, 17);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(102, 25);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Qtd de Box";
-            // 
-            // nudQtdBox
-            // 
-            this.nudQtdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQtdBox.Location = new System.Drawing.Point(211, 13);
-            this.nudQtdBox.Name = "nudQtdBox";
-            this.nudQtdBox.Size = new System.Drawing.Size(48, 29);
-            this.nudQtdBox.TabIndex = 6;
-            // 
-            // cmdGerarBox
-            // 
-            this.cmdGerarBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdGerarBox.Location = new System.Drawing.Point(117, 12);
-            this.cmdGerarBox.Name = "cmdGerarBox";
-            this.cmdGerarBox.Size = new System.Drawing.Size(88, 66);
-            this.cmdGerarBox.TabIndex = 5;
-            this.cmdGerarBox.Text = "Gerar Box";
+            this.lblNumeroBox.AutoSize = true;
+            this.lblNumeroBox.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNumeroBox.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblNumeroBox.Location = new System.Drawing.Point(289, 81);
+            this.lblNumeroBox.Name = "lblNumeroBox";
+            this.lblNumeroBox.Size = new System.Drawing.Size(20, 25);
+            this.lblNumeroBox.TabIndex = 8;
+            this.lblNumeroBox.Text = "..";
             // 
             // lblQtdBox
             // 
@@ -132,20 +126,28 @@
             this.lblQtdBox.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblQtdBox.Location = new System.Drawing.Point(52, 81);
             this.lblQtdBox.Name = "lblQtdBox";
-            this.lblQtdBox.Size = new System.Drawing.Size(226, 25);
+            this.lblQtdBox.Size = new System.Drawing.Size(230, 25);
             this.lblQtdBox.TabIndex = 7;
-            this.lblQtdBox.Text = "Quantidade de Box gerado";
+            this.lblQtdBox.Text = "Quantidade de Box gerado:";
             // 
-            // lblNumeroBox
+            // nudQtdBox
             // 
-            this.lblNumeroBox.AutoSize = true;
-            this.lblNumeroBox.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblNumeroBox.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblNumeroBox.Location = new System.Drawing.Point(284, 81);
-            this.lblNumeroBox.Name = "lblNumeroBox";
-            this.lblNumeroBox.Size = new System.Drawing.Size(20, 25);
-            this.lblNumeroBox.TabIndex = 8;
-            this.lblNumeroBox.Text = "..";
+            this.nudQtdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQtdBox.Location = new System.Drawing.Point(215, 17);
+            this.nudQtdBox.Name = "nudQtdBox";
+            this.nudQtdBox.Size = new System.Drawing.Size(48, 29);
+            this.nudQtdBox.TabIndex = 6;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(103, 17);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Qtd de Box:";
             // 
             // FrmBox
             // 
@@ -155,7 +157,7 @@
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "FrmBox";
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Cadastro de Box";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.metroPanel2.ResumeLayout(false);

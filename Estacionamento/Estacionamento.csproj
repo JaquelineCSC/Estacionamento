@@ -59,11 +59,17 @@
     <Compile Include="Box.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conexao.cs" />
-    <Compile Include="EntradaVeiculo.cs">
+    <Compile Include="FrmConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntradaVeiculo.Designer.cs">
-      <DependentUpon>EntradaVeiculo.cs</DependentUpon>
+    <Compile Include="FrmConsulta.Designer.cs">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntradaVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntradaVeiculo.Designer.cs">
+      <DependentUpon>FrmEntradaVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Estacionamento.cs" />
     <Compile Include="FrmBox.cs">
@@ -136,15 +142,18 @@
     <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaidaVeiculo.cs">
+    <Compile Include="FrmSaidaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaidaVeiculo.Designer.cs">
-      <DependentUpon>SaidaVeiculo.cs</DependentUpon>
+    <Compile Include="FrmSaidaVeiculo.Designer.cs">
+      <DependentUpon>FrmSaidaVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Veiculo.cs" />
-    <EmbeddedResource Include="EntradaVeiculo.resx">
-      <DependentUpon>EntradaVeiculo.cs</DependentUpon>
+    <EmbeddedResource Include="FrmConsulta.resx">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntradaVeiculo.resx">
+      <DependentUpon>FrmEntradaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBox.resx">
       <DependentUpon>FrmBox.cs</DependentUpon>
@@ -189,8 +198,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SaidaVeiculo.resx">
-      <DependentUpon>SaidaVeiculo.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSaidaVeiculo.resx">
+      <DependentUpon>FrmSaidaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -211,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\impressora.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
