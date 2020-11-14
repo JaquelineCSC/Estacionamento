@@ -56,5 +56,11 @@ namespace Estacionamento
             FrmCadastraEstacionamento ce = new FrmCadastraEstacionamento();
             ce.ShowDialog();
         }
+
+        private void entradaVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            cc.ShowDialog();
+        }
     }
 }
