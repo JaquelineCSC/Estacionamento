@@ -36,7 +36,7 @@ namespace Estacionamento
         {
             string sql = "SELECT * FROM Veiculo  WHERE placa LIKE '" + Placa + "%'";
             return objConexao.Listar(sql);
-        }
+        }   
         public void ConsultarVeiculo()
         {
             string sql = "";

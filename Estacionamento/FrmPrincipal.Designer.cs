@@ -70,7 +70,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1137, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1507, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,28 +88,28 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // colaboradorToolStripMenuItem
             // 
             this.colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
-            this.colaboradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaboradorToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.colaboradorToolStripMenuItem.Text = "Colaborador";
             this.colaboradorToolStripMenuItem.Click += new System.EventHandler(this.colaboradorToolStripMenuItem_Click);
             // 
             // veiculoToolStripMenuItem
             // 
             this.veiculoToolStripMenuItem.Name = "veiculoToolStripMenuItem";
-            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.veiculoToolStripMenuItem.Text = "Veiculo";
             this.veiculoToolStripMenuItem.Click += new System.EventHandler(this.veiculoToolStripMenuItem_Click);
             // 
             // estacionamentoToolStripMenuItem
             // 
             this.estacionamentoToolStripMenuItem.Name = "estacionamentoToolStripMenuItem";
-            this.estacionamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estacionamentoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.estacionamentoToolStripMenuItem.Text = "Estacionamento";
             this.estacionamentoToolStripMenuItem.Click += new System.EventHandler(this.estacionamentoToolStripMenuItem_Click);
             // 
@@ -163,10 +163,10 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 8;
-            this.metroPanel1.Location = new System.Drawing.Point(7, 86);
+            this.metroPanel1.Location = new System.Drawing.Point(15, 86);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1156, 58);
+            this.metroPanel1.Size = new System.Drawing.Size(1499, 58);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -267,25 +267,32 @@
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLink1.TabIndex = 3;
             this.metroLink1.Text = "GitHub";
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // lblDataHora
             // 
             this.lblDataHora.AutoSize = true;
-            this.lblDataHora.Location = new System.Drawing.Point(1037, 16);
+            this.lblDataHora.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblDataHora.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblDataHora.Location = new System.Drawing.Point(1323, 16);
             this.lblDataHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDataHora.Name = "lblDataHora";
-            this.lblDataHora.Size = new System.Drawing.Size(80, 19);
+            this.lblDataHora.Size = new System.Drawing.Size(114, 25);
             this.lblDataHora.TabIndex = 2;
             this.lblDataHora.Text = "Data e Hora";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Estacionamento.Properties.Resources.estacionamento_carros;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 157);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 158);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1156, 484);
+            this.pictureBox1.Size = new System.Drawing.Size(1499, 605);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -293,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 640);
+            this.ClientSize = new System.Drawing.Size(1537, 839);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroPanel1);
@@ -307,6 +314,7 @@
             this.Text = "Pare e Pague Estacionamentos";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.metroPanel1.ResumeLayout(false);

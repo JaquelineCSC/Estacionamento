@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Estacionamento
 {
@@ -33,6 +34,11 @@ namespace Estacionamento
         {
             string sql = "DELETE FROM Box WHERE idBox = " + IdBox.ToString();
             objConexao.Executar(sql);
+        }
+        public DataSet ListarBox()
+        {
+            string sql = "SELECT * FROM Box  WHERE idControle = " + IdBox.ToString();
+            return objConexao.Listar(sql);
         }
     }
 }

@@ -41,6 +41,7 @@
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
+            this.cmdBox = new MetroFramework.Controls.MetroButton();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // metroPanel2
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.Teal;
+            this.metroPanel2.Controls.Add(this.cmdBox);
             this.metroPanel2.Controls.Add(this.cmdLocalizaEstacionamento);
             this.metroPanel2.Controls.Add(this.txtEndereco);
             this.metroPanel2.Controls.Add(this.txtValorHora);
@@ -204,6 +206,16 @@
             this.cmdNovo.Text = "Novo";
             this.cmdNovo.Click += new System.EventHandler(this.cmdNovo_Click);
             // 
+            // cmdBox
+            // 
+            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdBox.Location = new System.Drawing.Point(371, 170);
+            this.cmdBox.Name = "cmdBox";
+            this.cmdBox.Size = new System.Drawing.Size(167, 46);
+            this.cmdBox.TabIndex = 24;
+            this.cmdBox.Text = "Cadastrar Box";
+            this.cmdBox.Click += new System.EventHandler(this.cmdBox_Click);
+            // 
             // FrmCadastraEstacionamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,5 +250,6 @@
         private MetroFramework.Controls.MetroButton cmdExcluir;
         private MetroFramework.Controls.MetroButton cmdSalvar;
         private MetroFramework.Controls.MetroButton cmdNovo;
+        private MetroFramework.Controls.MetroButton cmdBox;
     }
 }

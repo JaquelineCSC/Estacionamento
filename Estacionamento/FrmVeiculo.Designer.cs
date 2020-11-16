@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.cmdPesquisaCar = new MetroFramework.Controls.MetroButton();
             this.txtKm = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtModelo = new MetroFramework.Controls.MetroTextBox();
@@ -44,14 +45,13 @@
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
-            this.cmdPesquisaCar = new MetroFramework.Controls.MetroButton();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel2.BackColor = System.Drawing.Color.Teal;
             this.metroPanel2.Controls.Add(this.cmdPesquisaCar);
             this.metroPanel2.Controls.Add(this.txtKm);
             this.metroPanel2.Controls.Add(this.metroLabel5);
@@ -74,6 +74,16 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // cmdPesquisaCar
+            // 
+            this.cmdPesquisaCar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdPesquisaCar.Location = new System.Drawing.Point(641, 162);
+            this.cmdPesquisaCar.Name = "cmdPesquisaCar";
+            this.cmdPesquisaCar.Size = new System.Drawing.Size(110, 56);
+            this.cmdPesquisaCar.TabIndex = 13;
+            this.cmdPesquisaCar.Text = "Pesquisa";
+            this.cmdPesquisaCar.Click += new System.EventHandler(this.cmdPesquisaCar_Click);
             // 
             // txtKm
             // 
@@ -185,7 +195,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gray;
+            this.metroPanel1.BackColor = System.Drawing.Color.Teal;
             this.metroPanel1.Controls.Add(this.cmdSair);
             this.metroPanel1.Controls.Add(this.cmdExcluir);
             this.metroPanel1.Controls.Add(this.cmdSalvar);
@@ -242,16 +252,6 @@
             this.cmdNovo.Text = "Novo";
             this.cmdNovo.Click += new System.EventHandler(this.cmdNovo_Click);
             // 
-            // cmdPesquisaCar
-            // 
-            this.cmdPesquisaCar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdPesquisaCar.Location = new System.Drawing.Point(641, 162);
-            this.cmdPesquisaCar.Name = "cmdPesquisaCar";
-            this.cmdPesquisaCar.Size = new System.Drawing.Size(110, 56);
-            this.cmdPesquisaCar.TabIndex = 13;
-            this.cmdPesquisaCar.Text = "Pesquisa";
-            this.cmdPesquisaCar.Click += new System.EventHandler(this.cmdPesquisaCar_Click);
-            // 
             // FrmVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +263,7 @@
             this.Name = "FrmVeiculo";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Cadastro de Veiculos";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.FrmVeiculo_Load);

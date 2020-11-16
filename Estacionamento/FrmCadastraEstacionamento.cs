@@ -143,5 +143,11 @@ namespace Estacionamento
             status = "Navegando";
             HabilitaControle();
         }
+
+        private void cmdBox_Click(object sender, EventArgs e)
+        {
+            FrmBox box = new FrmBox();
+            box.ShowDialog();
+        }
     }
 }

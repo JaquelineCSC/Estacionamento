@@ -92,5 +92,20 @@ namespace Estacionamento
             FrmConsulta fc = new FrmConsulta();
             fc.ShowDialog();
         }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/JaquelineCSC/Estacionamento");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDataHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
     }
 }

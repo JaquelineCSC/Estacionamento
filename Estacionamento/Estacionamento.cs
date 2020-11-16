@@ -36,7 +36,7 @@ namespace Estacionamento
         public void ConsultarEstacionamento()
         {
             string sql = "";
-            sql += "SELECT * FROM Estacionamento WHERE idEstacionamento = " + IdEstacionamento;
+            sql += "SELECT * FROM Estacionamento WHERE idEstacionamento = " + IdEstacionamento.ToString();
             objConexao.Consultar(sql);
             string[] aux = objConexao.Campos.Split(';');
             NomeEstacionamento = aux[1];
@@ -46,7 +46,7 @@ namespace Estacionamento
         public void AlterarEstacionamento()
         {
             string sql = "UPDATE Estacionamento SET nomeEstacionamento ='" + NomeEstacionamento + "', valorHoras ='" + ValorHora.ToString().Replace(",", ".") +
-                "',endereco = " + Endereco + "WHERE idEstacionamento = " + IdEstacionamento.ToString();
+                "',endereco = '" + Endereco + "'WHERE idEstacionamento = " + IdEstacionamento.ToString();
             objConexao.Executar(sql);
         }
         public void ExcluirEstacionamento()
