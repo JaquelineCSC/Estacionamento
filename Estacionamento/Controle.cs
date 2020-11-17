@@ -13,7 +13,7 @@ namespace Estacionamento
         private string dataEntrada;
         private string horaEntrada;
         private string horaSaida;
-        private double valorTotal;
+        private float valorTotal;
         private int idVeiculo;
         private int idBox;
 
@@ -21,7 +21,7 @@ namespace Estacionamento
         public string DataEntrada { get => dataEntrada; set => dataEntrada = value; }
         public string HoraEntrada { get => horaEntrada; set => horaEntrada = value; }
         public string HoraSaida { get => horaSaida; set => horaSaida = value; }
-        public double ValorTotal { get => valorTotal; set => valorTotal = value; }
+        public float ValorTotal { get => valorTotal; set => valorTotal = value; }
         public int IdVeiculo { get => idVeiculo; set => idVeiculo = value; }
         public int IdBox { get => idBox; set => idBox = value; }
 
@@ -61,9 +61,9 @@ namespace Estacionamento
             DataEntrada = aux[1];
             HoraEntrada = aux[2];
             HoraSaida = aux[3];
-            ValorTotal = double.Parse(aux[4]);
-            IdVeiculo = int.Parse(aux[5]);
-            IdBox = int.Parse(aux[6]);
+            //ValorTotal = float.Parse(aux[4]);
+            //IdVeiculo = int.Parse(aux[5]);
+            //IdBox = int.Parse(aux[6]);
         }
 
     }

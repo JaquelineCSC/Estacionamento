@@ -23,10 +23,10 @@ namespace Estacionamento
         Box box = new Box();
         private int idControle;
         
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idControle = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
+        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    idControle = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        //}
 
         private void FrmSaidaVeiculo_Load(object sender, EventArgs e)
         {
@@ -46,17 +46,20 @@ namespace Estacionamento
 
         private void cmdCalcular_Click(object sender, EventArgs e)
         {
+            TimeSpan timeTotal = new TimeSpan();
+
             controle.IdControle = idControle;
             controle.ConsultarControle();
 
-            TimeSpan entrada = TimeSpan.Parse(controle.HoraEntrada);
-            TimeSpan saida = TimeSpan.Parse(dtpHoraSaida.Text);
-            TimeSpan timeTotal = saida - entrada;
-            float tempo = float.Parse(timeTotal.ToString());
+            timeTotal =TimeSpan.Parse(dtpHoraSaida.Text) - TimeSpan.Parse(controle.HoraEntrada); 
+
+            double tempo = timeTotal.Hours;
+            txtTotalHora.Text = tempo.ToString();
             box.IdEstacionamento = IdEstacionamento;
             box.ConsultaValor();
             controle.HoraSaida = dtpHoraSaida.Text;
-            controle.ValorTotal = tempo * box.Valor;
+            controle.ValorTotal = (((float)tempo) * box.Valor);
+
             txtValorTotal.Text = controle.ValorTotal.ToString("R$0.00");
         }
 
@@ -66,5 +69,9 @@ namespace Estacionamento
             this.Close();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idControle = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
     }
 }
