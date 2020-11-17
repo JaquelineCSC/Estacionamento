@@ -19,6 +19,7 @@ namespace Estacionamento
         }
         private string status = "Navegando";
         Funcionario func = new Funcionario();
+        FrmAcesso fa = new FrmAcesso();
         private void cmdSair_Click(object sender, EventArgs e)
         {           
             this.FindForm();
@@ -92,6 +93,7 @@ namespace Estacionamento
         {
             LimpaControle();
             status = "Inserindo";
+            txtIdEstacionamento.Text = fa.IdEstacionamento.ToString();
             HabilitaControle();
         }
 
@@ -102,7 +104,7 @@ namespace Estacionamento
             func.DataCadastro = dtpDataCadastroFunc.Value.ToString("yyyy-MM-dd");
             func.Fone = txtFoneFunc.Text;
             func.Cargo = txtCargo.Text;
-            func.IdEstacionamento = int.Parse(txtIdEstacionamento.Text);
+            func.IdEstacionamento = fa.IdEstacionamento;
  
             if (status == "Inserindo")
             {

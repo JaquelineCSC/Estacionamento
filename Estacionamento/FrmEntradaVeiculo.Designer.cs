@@ -127,7 +127,7 @@
             // 
             // cmdCadastrarVeiculo
             // 
-            this.cmdCadastrarVeiculo.Location = new System.Drawing.Point(511, 61);
+            this.cmdCadastrarVeiculo.Location = new System.Drawing.Point(511, 10);
             this.cmdCadastrarVeiculo.Name = "cmdCadastrarVeiculo";
             this.cmdCadastrarVeiculo.Size = new System.Drawing.Size(158, 45);
             this.cmdCadastrarVeiculo.TabIndex = 13;
@@ -140,7 +140,7 @@
             this.cmbPlaca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPlaca.FormattingEnabled = true;
-            this.cmbPlaca.Location = new System.Drawing.Point(89, 56);
+            this.cmbPlaca.Location = new System.Drawing.Point(89, 13);
             this.cmbPlaca.Name = "cmbPlaca";
             this.cmbPlaca.Size = new System.Drawing.Size(116, 32);
             this.cmbPlaca.TabIndex = 15;
@@ -150,7 +150,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(14, 63);
+            this.metroLabel3.Location = new System.Drawing.Point(14, 20);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(52, 25);
             this.metroLabel3.TabIndex = 14;
@@ -158,7 +158,7 @@
             // 
             // cmdCadastraCliente
             // 
-            this.cmdCadastraCliente.Location = new System.Drawing.Point(511, 10);
+            this.cmdCadastraCliente.Location = new System.Drawing.Point(511, 61);
             this.cmdCadastraCliente.Name = "cmdCadastraCliente";
             this.cmdCadastraCliente.Size = new System.Drawing.Size(158, 45);
             this.cmdCadastraCliente.TabIndex = 12;
@@ -171,9 +171,9 @@
             this.cmbCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(89, 10);
+            this.cmbCliente.Location = new System.Drawing.Point(89, 54);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(244, 32);
+            this.cmbCliente.Size = new System.Drawing.Size(405, 32);
             this.cmbCliente.TabIndex = 11;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
@@ -181,7 +181,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(14, 17);
+            this.metroLabel6.Location = new System.Drawing.Point(14, 61);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(64, 25);
             this.metroLabel6.TabIndex = 10;
@@ -190,16 +190,17 @@
             // txtValorHora
             // 
             this.txtValorHora.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtValorHora.Location = new System.Drawing.Point(357, 169);
+            this.txtValorHora.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtValorHora.Location = new System.Drawing.Point(383, 169);
             this.txtValorHora.Name = "txtValorHora";
-            this.txtValorHora.Size = new System.Drawing.Size(86, 23);
+            this.txtValorHora.Size = new System.Drawing.Size(86, 27);
             this.txtValorHora.TabIndex = 9;
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(228, 167);
+            this.metroLabel5.Location = new System.Drawing.Point(254, 171);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(123, 25);
             this.metroLabel5.TabIndex = 8;

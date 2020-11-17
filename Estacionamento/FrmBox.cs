@@ -103,6 +103,7 @@ namespace Estacionamento
             {
                 box.NumBox = i;
                 box.IdEstacionamento = IdEstacionamento;
+                box.Status = "free";
                 if (status == "Inserindo")
                 {
                     box.IncluirBox();

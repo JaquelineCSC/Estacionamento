@@ -28,39 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpDataSaida = new System.Windows.Forms.DateTimePicker();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.components = new System.ComponentModel.Container();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtValorTotal = new MetroFramework.Controls.MetroTextBox();
-            this.cmdValidarSaida = new MetroFramework.Controls.MetroButton();
+            this.cmdImprimir = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpHoraSaida = new System.Windows.Forms.DateTimePicker();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cmdSair = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmdCalcular = new MetroFramework.Controls.MetroButton();
+            this.cmdConfirmar = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtpDataSaida
-            // 
-            this.dtpDataSaida.Location = new System.Drawing.Point(114, 38);
-            this.dtpDataSaida.Name = "dtpDataSaida";
-            this.dtpDataSaida.Size = new System.Drawing.Size(235, 20);
-            this.dtpDataSaida.TabIndex = 0;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(13, 33);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(95, 25);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Data/Hora:";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(13, 74);
+            this.metroLabel2.Location = new System.Drawing.Point(283, 31);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(127, 25);
             this.metroLabel2.TabIndex = 2;
@@ -68,33 +59,34 @@
             // 
             // txtValorTotal
             // 
-            this.txtValorTotal.Location = new System.Drawing.Point(146, 76);
+            this.txtValorTotal.Location = new System.Drawing.Point(425, 29);
             this.txtValorTotal.Name = "txtValorTotal";
-            this.txtValorTotal.Size = new System.Drawing.Size(75, 23);
+            this.txtValorTotal.Size = new System.Drawing.Size(75, 27);
             this.txtValorTotal.TabIndex = 3;
             // 
-            // cmdValidarSaida
+            // cmdImprimir
             // 
-            this.cmdValidarSaida.Location = new System.Drawing.Point(136, 7);
-            this.cmdValidarSaida.Name = "cmdValidarSaida";
-            this.cmdValidarSaida.Size = new System.Drawing.Size(106, 50);
-            this.cmdValidarSaida.TabIndex = 4;
-            this.cmdValidarSaida.Text = "Validar";
+            this.cmdImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdImprimir.Location = new System.Drawing.Point(263, 6);
+            this.cmdImprimir.Name = "cmdImprimir";
+            this.cmdImprimir.Size = new System.Drawing.Size(106, 50);
+            this.cmdImprimir.TabIndex = 4;
+            this.cmdImprimir.Text = "Imprimir Ticket";
             // 
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Teal;
-            this.metroPanel1.Controls.Add(this.txtValorTotal);
-            this.metroPanel1.Controls.Add(this.dtpDataSaida);
+            this.metroPanel1.Controls.Add(this.dtpHoraSaida);
             this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.Controls.Add(this.txtValorTotal);
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.CustomBackground = true;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 75);
+            this.metroPanel1.Location = new System.Drawing.Point(21, 291);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(392, 130);
+            this.metroPanel1.Size = new System.Drawing.Size(680, 94);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -103,44 +95,131 @@
             // metroPanel2
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.Teal;
-            this.metroPanel2.Controls.Add(this.cmdValidarSaida);
+            this.metroPanel2.Controls.Add(this.cmdConfirmar);
+            this.metroPanel2.Controls.Add(this.cmdCalcular);
+            this.metroPanel2.Controls.Add(this.cmdSair);
+            this.metroPanel2.Controls.Add(this.cmdImprimir);
             this.metroPanel2.CustomBackground = true;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(23, 217);
+            this.metroPanel2.Location = new System.Drawing.Point(21, 391);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(392, 63);
+            this.metroPanel2.Size = new System.Drawing.Size(680, 63);
             this.metroPanel2.TabIndex = 6;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 76);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(678, 209);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dtpHoraSaida
+            // 
+            this.dtpHoraSaida.CustomFormat = "dd/MM/yyy HH:mm:ss";
+            this.dtpHoraSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHoraSaida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraSaida.Location = new System.Drawing.Point(103, 27);
+            this.dtpHoraSaida.Name = "dtpHoraSaida";
+            this.dtpHoraSaida.Size = new System.Drawing.Size(116, 29);
+            this.dtpHoraSaida.TabIndex = 4;
+            this.dtpHoraSaida.Value = new System.DateTime(2020, 11, 15, 23, 15, 0, 0);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(28, 31);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 25);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "Horário";
+            // 
+            // cmdSair
+            // 
+            this.cmdSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSair.Location = new System.Drawing.Point(540, 7);
+            this.cmdSair.Name = "cmdSair";
+            this.cmdSair.Size = new System.Drawing.Size(106, 50);
+            this.cmdSair.TabIndex = 5;
+            this.cmdSair.Text = "Cancelar";
+            this.cmdSair.Click += new System.EventHandler(this.cmdSair_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(23, 48);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(49, 25);
+            this.metroLabel3.TabIndex = 6;
+            this.metroLabel3.Text = "Pátio";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // cmdCalcular
+            // 
+            this.cmdCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCalcular.Location = new System.Drawing.Point(13, 7);
+            this.cmdCalcular.Name = "cmdCalcular";
+            this.cmdCalcular.Size = new System.Drawing.Size(106, 50);
+            this.cmdCalcular.TabIndex = 6;
+            this.cmdCalcular.Text = "Calcular";
+            this.cmdCalcular.Click += new System.EventHandler(this.cmdCalcular_Click);
+            // 
+            // cmdConfirmar
+            // 
+            this.cmdConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdConfirmar.Location = new System.Drawing.Point(139, 6);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(106, 50);
+            this.cmdConfirmar.TabIndex = 7;
+            this.cmdConfirmar.Text = "Confirmar";
+            // 
             // FrmSaidaVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 292);
+            this.ClientSize = new System.Drawing.Size(724, 470);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroPanel2);
             this.Name = "FrmSaidaVeiculo";
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Saida Veiculo";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.Load += new System.EventHandler(this.FrmSaidaVeiculo_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtpDataSaida;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtValorTotal;
-        private MetroFramework.Controls.MetroButton cmdValidarSaida;
+        private MetroFramework.Controls.MetroButton cmdImprimir;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpHoraSaida;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton cmdSair;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.Timer timer1;
+        private MetroFramework.Controls.MetroButton cmdConfirmar;
+        private MetroFramework.Controls.MetroButton cmdCalcular;
     }
 }

@@ -124,7 +124,7 @@
             this.cmbCliente.Location = new System.Drawing.Point(185, 22);
             this.cmbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(433, 35);
+            this.cmbCliente.Size = new System.Drawing.Size(463, 35);
             this.cmbCliente.TabIndex = 24;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Estacionamento
 {
@@ -28,6 +29,20 @@ namespace Estacionamento
         {
             string sql = "UPDATE Login SET nomeLogin ='" + NomeLogin + "', senhaLogin ='" + Senha + "WHERE idLogin = " + IdLogin.ToString();
             objConexao.Executar(sql);
+        }
+        public DataSet ListarLogin()
+        {
+            string sql = "SELECT * FROM Login  WHERE nomeLogin LIKE '" + NomeLogin + "%'";
+            return objConexao.Listar(sql);
+        }
+        public void ConsultarLogin()
+        {
+            string sql = "";
+            sql += "SELECT * FROM Login WHERE idLogin = " + IdLogin.ToString();
+            objConexao.Consultar(sql);
+            string[] aux = objConexao.Campos.Split(';');
+            NomeLogin = aux[1];
+            Senha = aux[2];
         }
     }
 }

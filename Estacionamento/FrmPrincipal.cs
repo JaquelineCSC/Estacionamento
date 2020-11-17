@@ -12,11 +12,12 @@ namespace Estacionamento
 {
     public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
-        public FrmPrincipal()
+        public FrmPrincipal(int IdEstacionamento)
         {
             InitializeComponent();
+            this.IdEstacionamento = IdEstacionamento;
         }
-
+        private int IdEstacionamento;
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCadastroCliente cc = new FrmCadastroCliente();
@@ -59,25 +60,25 @@ namespace Estacionamento
 
         private void entradaVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEntradaVeiculo fev = new FrmEntradaVeiculo();
+            FrmEntradaVeiculo fev = new FrmEntradaVeiculo(IdEstacionamento);
             fev.ShowDialog();
         }
 
         private void cmdEntada_Click(object sender, EventArgs e)
         {
-            FrmEntradaVeiculo fev = new FrmEntradaVeiculo();
+            FrmEntradaVeiculo fev = new FrmEntradaVeiculo(IdEstacionamento);
             fev.ShowDialog();
         }
 
         private void saidaVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo();
+            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo(IdEstacionamento);
             fsv.ShowDialog();
         }
 
         private void cmdSaida_Click(object sender, EventArgs e)
         {
-            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo();
+            FrmSaidaVeiculo fsv = new FrmSaidaVeiculo(IdEstacionamento);
             fsv.ShowDialog();
         }
 

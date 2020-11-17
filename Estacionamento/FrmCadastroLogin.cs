@@ -35,6 +35,8 @@ namespace Estacionamento
             lg.Senha = txtSenha.Text;
 
             lg.IncluirLogin();
+            MessageBox.Show("Login cadastrado com sucesso!", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Estacionamento
         private double valorTotal;
         private int idVeiculo;
         private int idBox;
-        private double valor;
 
         public int IdControle { get => idControle; set => idControle = value; }
         public string DataEntrada { get => dataEntrada; set => dataEntrada = value; }
@@ -25,7 +24,6 @@ namespace Estacionamento
         public double ValorTotal { get => valorTotal; set => valorTotal = value; }
         public int IdVeiculo { get => idVeiculo; set => idVeiculo = value; }
         public int IdBox { get => idBox; set => idBox = value; }
-        public double Valor { get => valor; set => valor = value; }
 
         Conexao objConexao = new Conexao();
 
@@ -37,7 +35,7 @@ namespace Estacionamento
         }
         public void AlterarControle()
         {
-            string sql = "UPDATE Controle SET horaSaida = '" + HoraSaida + "',valorTotal ='" + ValorTotal.ToString().Replace(",", ".") + "'" +
+            string sql = "UPDATE Controle SET horaSaida = '" + HoraSaida + "',valorTotal =" + ValorTotal.ToString().Replace(",", ".") +
                 "WHERE idControle =" + IdControle.ToString();
             objConexao.Executar(sql);
         }
@@ -46,12 +44,13 @@ namespace Estacionamento
             string sql = "SELECT * FROM Controle  WHERE idControle = " + IdControle.ToString();
             return objConexao.Listar(sql);
         }
-        public void ConsultaEstacionamento()
+        public DataSet ListarControleSaida()
         {
-            string sql = "SELECT valorHora FROM Controle c INNER JOIN Box b ON c.idBox = b.iBox INNER JOIN Estacionamento e ON b.idEstacionamento = e.idEstacionamento" +
-                "WHERE c.idBox=" + IdBox.ToString();
-            objConexao.Consultar(sql);
-            Valor = double.Parse(objConexao.Campos);
+            string sql = "SELECT con.idControle, b.numBox, v.placa, cl.nomeCliente, con.horaEntrada, con.dataEntrada FROM Box b " +
+                    "INNER JOIN Controle con ON con.idBox = b.idBox "+
+                    "INNER JOIN Veiculo v ON con.idVeiculo = v.idVeiculo " +
+                    "INNER JOIN Cliente cl ON v.idCliente = cl.idCliente WHERE b.status LIKE 'busy%'";
+            return objConexao.Listar(sql);
         }
         public void ConsultarControle()
         {
@@ -66,5 +65,6 @@ namespace Estacionamento
             IdVeiculo = int.Parse(aux[5]);
             IdBox = int.Parse(aux[6]);
         }
+
     }
 }

@@ -12,9 +12,59 @@ namespace Estacionamento
 {
     public partial class FrmSaidaVeiculo : MetroFramework.Forms.MetroForm
     {
-        public FrmSaidaVeiculo()
+        public FrmSaidaVeiculo(int IdEstacionamento)
         {
             InitializeComponent();
+            this.IdEstacionamento = IdEstacionamento;
         }
+
+        private int IdEstacionamento;
+        Controle controle = new Controle();
+        Box box = new Box();
+        private int idControle;
+        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idControle = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void FrmSaidaVeiculo_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            dataGridView1.DataSource = controle.ListarControleSaida().Tables[0];
+            //dataGridView1.Columns[0].Visible = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.MultiSelect = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Rows[0].Selected = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dtpHoraSaida.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void cmdCalcular_Click(object sender, EventArgs e)
+        {
+            controle.IdControle = idControle;
+            controle.ConsultarControle();
+
+            TimeSpan entrada = TimeSpan.Parse(controle.HoraEntrada);
+            TimeSpan saida = TimeSpan.Parse(dtpHoraSaida.Text);
+            TimeSpan timeTotal = saida - entrada;
+            float tempo = float.Parse(timeTotal.ToString());
+            box.IdEstacionamento = IdEstacionamento;
+            box.ConsultaValor();
+            controle.HoraSaida = dtpHoraSaida.Text;
+            controle.ValorTotal = tempo * box.Valor;
+            txtValorTotal.Text = controle.ValorTotal.ToString("R$0.00");
+        }
+
+        private void cmdSair_Click(object sender, EventArgs e)
+        {
+            this.FindForm();
+            this.Close();
+        }
+
     }
 }

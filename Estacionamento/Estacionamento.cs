@@ -45,7 +45,7 @@ namespace Estacionamento
         }
         public void AlterarEstacionamento()
         {
-            string sql = "UPDATE Estacionamento SET nomeEstacionamento ='" + NomeEstacionamento + "', valorHoras ='" + ValorHora.ToString().Replace(",", ".") +
+            string sql = "UPDATE Estacionamento SET nomeEstacionamento ='" + NomeEstacionamento + "', valorHora ='" + ValorHora.ToString().Replace(",", ".") +
                 "',endereco = '" + Endereco + "'WHERE idEstacionamento = " + IdEstacionamento.ToString();
             objConexao.Executar(sql);
         }
