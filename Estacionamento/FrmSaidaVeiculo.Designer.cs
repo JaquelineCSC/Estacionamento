@@ -33,6 +33,8 @@
             this.txtValorTotal = new MetroFramework.Controls.MetroTextBox();
             this.cmdImprimir = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.txtTotalHora = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.dtpHoraSaida = new System.Windows.Forms.DateTimePicker();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -42,8 +44,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtTotalHora = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,6 +76,7 @@
             this.cmdImprimir.Size = new System.Drawing.Size(106, 50);
             this.cmdImprimir.TabIndex = 4;
             this.cmdImprimir.Text = "Imprimir Ticket";
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
             // 
             // metroPanel1
             // 
@@ -97,6 +98,25 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // txtTotalHora
+            // 
+            this.txtTotalHora.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtTotalHora.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTotalHora.Location = new System.Drawing.Point(590, 29);
+            this.txtTotalHora.Name = "txtTotalHora";
+            this.txtTotalHora.Size = new System.Drawing.Size(75, 27);
+            this.txtTotalHora.TabIndex = 7;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Location = new System.Drawing.Point(477, 31);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(101, 25);
+            this.metroLabel4.TabIndex = 6;
+            this.metroLabel4.Text = "Tempo Total";
             // 
             // dtpHoraSaida
             // 
@@ -146,6 +166,7 @@
             this.cmdConfirmar.Size = new System.Drawing.Size(106, 50);
             this.cmdConfirmar.TabIndex = 7;
             this.cmdConfirmar.Text = "Confirmar";
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
             // 
             // cmdCalcular
             // 
@@ -174,7 +195,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(678, 209);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // metroLabel3
             // 
@@ -189,25 +210,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtTotalHora
-            // 
-            this.txtTotalHora.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtTotalHora.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtTotalHora.Location = new System.Drawing.Point(590, 29);
-            this.txtTotalHora.Name = "txtTotalHora";
-            this.txtTotalHora.Size = new System.Drawing.Size(75, 27);
-            this.txtTotalHora.TabIndex = 7;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(477, 31);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(101, 25);
-            this.metroLabel4.TabIndex = 6;
-            this.metroLabel4.Text = "Tempo Total";
             // 
             // FrmSaidaVeiculo
             // 

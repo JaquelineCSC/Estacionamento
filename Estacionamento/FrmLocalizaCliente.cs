@@ -36,11 +36,11 @@ namespace Estacionamento
         {
             cliente.Nome = txtNome.Text;
             dataGridView1.DataSource = cliente.ListarCliente().Tables[0];
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            IdCliente = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.MultiSelect = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Rows[0].Selected = true;
         }
 
         private void dataGridView1_DoubleClick_1(object sender, EventArgs e)
@@ -52,6 +52,11 @@ namespace Estacionamento
         {
             this.FindForm();
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdCliente = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

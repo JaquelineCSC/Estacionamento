@@ -30,11 +30,10 @@ namespace Estacionamento
         {
             FrmCadastroLogin cl = new FrmCadastroLogin();
             cl.ShowDialog();
-
-            func.IdLogin = cl.IdLogin;
-
-            status = "Editando";
+            
+            status = "Inserindo";
             HabilitaControle();
+            cmdSalvar.Enabled = true;
         }
 
         private void FrmCadastraFuncionario_Load(object sender, EventArgs e)
@@ -67,7 +66,7 @@ namespace Estacionamento
                         item.Enabled = true;
                 }
             }
-            if (status == "Inserindo" || status == "Editando")
+            if (status == "Editando" || status == "Inserindo")
             {
                 foreach (Control item in this.metroPanel2.Controls)
                 {
@@ -93,7 +92,6 @@ namespace Estacionamento
         {
             LimpaControle();
             status = "Inserindo";
-            txtIdEstacionamento.Text = fa.IdEstacionamento.ToString();
             HabilitaControle();
         }
 
@@ -104,8 +102,8 @@ namespace Estacionamento
             func.DataCadastro = dtpDataCadastroFunc.Value.ToString("yyyy-MM-dd");
             func.Fone = txtFoneFunc.Text;
             func.Cargo = txtCargo.Text;
-            func.IdEstacionamento = fa.IdEstacionamento;
- 
+            func.IdEstacionamento = int.Parse(txtIdEstacionamento.Text);
+
             if (status == "Inserindo")
             {
                 func.IncluirFuncionario();
@@ -115,7 +113,7 @@ namespace Estacionamento
             if (status == "Editando")
             {
                 func.AlterarDadosFunc();
-                MessageBox.Show("Colaborador alterado com sucesso!!!");
+                MessageBox.Show("Colaborador alterado com sucesso!!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             status = "Navegando";
             LimpaControle();
@@ -155,6 +153,7 @@ namespace Estacionamento
                 txtFoneFunc.Text = func.Fone;
                 txtCargo.Text = func.Cargo;
                 txtIdEstacionamento.Text = func.IdEstacionamento.ToString();
+               
             }
             status = "Editando";
             HabilitaControle();        

@@ -148,14 +148,16 @@ namespace Estacionamento
                 MessageBox.Show("Entrada de veiculo registrado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            if (status == "Editando")
-            {
-                controle.AlterarControle();
-                MessageBox.Show("Entrada de veiculo alterado com sucesso!!!");
-            }
             status = "Navegando";
             LimpaControle();
             HabilitaControle();
+            cmdSaida.Enabled = true;
+
+            box.IdEstacionamento = IdEstacionamento;
+            cmbBox.DisplayMember = "numBox";
+            cmbBox.ValueMember = "idBox";
+            cmbBox.DataSource = box.ListarBox().Tables[0];
+            cmbBox.Text = "";
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)

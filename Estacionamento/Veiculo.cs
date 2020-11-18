@@ -36,12 +36,22 @@ namespace Estacionamento
         {
             string sql = "SELECT * FROM Veiculo  WHERE placa LIKE '" + Placa + "%'";
             return objConexao.Listar(sql);
-        }   
+        }
         public DataSet ListarVeiculoporCliente()
         {
             string sql = "SELECT c.nomeCliente, c.idCliente FROM Veiculo v inner join Cliente c on v.idCLiente = c.idCliente  WHERE v.idVeiculo=" + IdVeiculo.ToString();
             return objConexao.Listar(sql);
         }
+
+        public DataSet ListarConsulta()
+        {
+            string sql = "SELECT v.placa, v.modelo, cl.nomeCliente, cl.cpfCliente, con.dataEntrada, con.valorTotal FROM Cliente cl" +
+                " INNER JOIN Veiculo v ON cl.idCliente = v.idCliente" +
+                " INNER JOIN Controle con ON con.idVeiculo = v.idVeiculo" +
+                " WHERE v.idVeiculo = " + IdVeiculo.ToString();
+            return objConexao.Listar(sql);
+        }
+
         public void ConsultarVeiculo()
         {
             string sql = "";

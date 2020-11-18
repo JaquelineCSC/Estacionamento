@@ -31,12 +31,6 @@ namespace Estacionamento
         {
             func.Nome = txtNome.Text;
             dataGridView1.DataSource = func.ListarFuncionario().Tables[0];
-        }
-
-        private void FrmPesquisaFunc_Load(object sender, EventArgs e)
-        {
-            func.Nome = "";
-            dataGridView1.DataSource = func.ListarFuncionario().Tables[0];
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = true;
@@ -44,14 +38,26 @@ namespace Estacionamento
             dataGridView1.Rows[0].Selected = true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FrmPesquisaFunc_Load(object sender, EventArgs e)
         {
-            IdFunc = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            func.Nome = "";
+            dataGridView1.DataSource = func.ListarFuncionario().Tables[0];
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.MultiSelect = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Rows[0].Selected = true;
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdFunc = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

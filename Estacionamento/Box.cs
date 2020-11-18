@@ -31,7 +31,7 @@ namespace Estacionamento
         }
         public void AlterarBox()
         {
-            string sql = "UPDATE Box SET status='" + Status + "'WHERE idBox = " + IdBox.ToString();
+            string sql = "UPDATE Box SET status = '"+ Status +"' WHERE idBox = " + IdBox.ToString();
             objConexao.Executar(sql);
         }
         public void ExcluirBox()
@@ -41,12 +41,19 @@ namespace Estacionamento
         }
         public DataSet ListarBox()
         {
-            string sql = "SELECT * FROM Box WHERE idEstacionamento = " + IdEstacionamento + "AND status LIKE 'free%'";
+            string sql = "SELECT * FROM Box WHERE idEstacionamento = " + IdEstacionamento.ToString() + "AND status LIKE 'free%'";
             return objConexao.Listar(sql);
+        }
+        public void GetBox()
+        {
+            string sql = "SELECT b.idBox FROM Box b inner join Controle c on b.idBox = c.idBox WHERE c.horaSaida is not null AND b.status LIKE 'busy%'";
+            objConexao.Consultar(sql);
+            string[] aux = objConexao.Campos.Split(';');
+            IdBox = int.Parse(aux[0]);
         }
         public void ConsultaValor()
         {
-            string sql = "SELECT DISTINCT e.valorHora FROM Box b inner join Estacionamento e on b.idEstacionamento = e.idEstacionamento WHERE b.idEstacionamento = " + IdEstacionamento;
+            string sql = "SELECT e.valorHora FROM Box b inner join Estacionamento e on b.idEstacionamento = e.idEstacionamento WHERE b.idEstacionamento = " + IdEstacionamento.ToString();
             objConexao.Consultar(sql);
             string[] aux = objConexao.Campos.Split(';');
             Valor = float.Parse(aux[0]);

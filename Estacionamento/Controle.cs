@@ -30,13 +30,13 @@ namespace Estacionamento
         public void IncluirControle()
         {
             string sql = "INSERT INTO Controle (dataEntrada, horaEntrada,  idVeiculo, idBox)" +
-                 "VALUES ('" + DataEntrada + "','" + HoraEntrada + "'," + IdVeiculo.ToString() + "," + IdBox.ToString() + ")";
+                 "VALUES ('" + DataEntrada + "','" + HoraEntrada.Trim() + "'," + IdVeiculo.ToString() + "," + IdBox.ToString() + ")";
             objConexao.Executar(sql);
         }
         public void AlterarControle()
         {
-            string sql = "UPDATE Controle SET horaSaida = '" + HoraSaida + "',valorTotal =" + ValorTotal.ToString().Replace(",", ".") +
-                "WHERE idControle =" + IdControle.ToString();
+            string sql = "UPDATE Controle SET horaSaida = '" + HoraSaida.Trim() + "',valorTotal =" + ValorTotal.ToString().Replace(",", ".") +
+                "WHERE idControle = " + IdControle.ToString() ;
             objConexao.Executar(sql);
         }
         public DataSet ListarControle()
@@ -49,9 +49,18 @@ namespace Estacionamento
             string sql = "SELECT con.idControle, b.numBox, v.placa, cl.nomeCliente, con.horaEntrada, con.dataEntrada FROM Box b " +
                     "INNER JOIN Controle con ON con.idBox = b.idBox "+
                     "INNER JOIN Veiculo v ON con.idVeiculo = v.idVeiculo " +
-                    "INNER JOIN Cliente cl ON v.idCliente = cl.idCliente WHERE b.status LIKE 'busy%'";
+                    "INNER JOIN Cliente cl ON v.idCliente = cl.idCliente WHERE  con.horaSaida is NULL AND b.status LIKE 'busy%'";
             return objConexao.Listar(sql);
         }
+        public DataSet ListarImprimir()
+        {
+            string sql = "SELECT b.numBox, v.placa, cl.nomecliente, con.horaEntrada, con.horaSaida, con.valorTotal FROM Box b " +
+                    "INNER JOIN Controle con ON con.idBox = b.idBox " +
+                    "INNER JOIN Veiculo v ON con.idVeiculo = v.idVeiculo " +
+                    "INNER JOIN Cliente cl ON v.idCliente = cl.idCliente WHERE idControle = " + IdControle.ToString();
+            return objConexao.Listar(sql);
+        }
+       
         public void ConsultarControle()
         {
             string sql = "";
@@ -61,9 +70,6 @@ namespace Estacionamento
             DataEntrada = aux[1];
             HoraEntrada = aux[2];
             HoraSaida = aux[3];
-            //ValorTotal = float.Parse(aux[4]);
-            //IdVeiculo = int.Parse(aux[5]);
-            //IdBox = int.Parse(aux[6]);
         }
 
     }

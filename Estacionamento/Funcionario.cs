@@ -33,12 +33,12 @@ namespace Estacionamento
         public void IncluirFuncionario()
         {
             string sql = "INSERT INTO Funcionario (nomeFuncionario, cpfFuncionario, foneFuncionario, dataCadastro,cargoFuncionario,idEstacionamento)" +
-                 "VALUES ('" + Nome + "','" + Cpf + "','" + Fone + "','" + DataCadastro + "','" + Cargo + "',"/* + IdLogin + ","*/ + IdEstacionamento + ")";
+                 "VALUES ('" + Nome + "','" + Cpf + "','" + Fone + "','" + DataCadastro + "','" + Cargo + "'," + IdEstacionamento + ")";
             objConexao.Executar(sql);
         }
         public DataSet ListarFuncionario()
         {
-            string sql = "SELECT * FROM Funcionario  WHERE nomeFuncionario LIKE '" + Nome + "%'";
+            string sql = "SELECT * FROM Funcionario WHERE nomeFuncionario LIKE '" + Nome + "%'";
             return objConexao.Listar(sql);
         }
         public void ConsultarFuncionario()
@@ -52,13 +52,12 @@ namespace Estacionamento
             Fone = aux[3];
             DataCadastro = aux[4];
             Cargo = aux[5];
-            //IdLogin =int.Parse(aux[6]);
             IdEstacionamento = int.Parse(aux[7]);
         }
         public void AlterarDadosFunc()
         {
             string sql = "UPDATE Funcionario SET nomeFuncionario ='" + Nome + "', cpfFuncionario ='" + Cpf + "',foneFuncionario ='" + Fone + "',dataCadastro ='" + DataCadastro + 
-                "',cargoFuncionario = '"+ Cargo+"',idLogin="+IdLogin+",idEstacionamento="+IdEstacionamento+"WHERE idFuncionario = " + IdFuncionario.ToString();
+                "',cargoFuncionario = '"+ Cargo+"',idEstacionamento="+IdEstacionamento+"WHERE idFuncionario = " + IdFuncionario.ToString();
             objConexao.Executar(sql);
         }
         public void ExcluirDados()

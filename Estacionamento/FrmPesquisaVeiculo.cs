@@ -45,14 +45,14 @@ namespace Estacionamento
             dataGridView1.DataSource = car.ListarVeiculo().Tables[0];
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IdVeiculo= int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
-
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IdVeiculo = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }
